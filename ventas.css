@@ -123,3 +123,18 @@ h2 {
         font-size: 1.25rem;
     }
 }
+/* Estilo para los mensajes de validación */
+.error-mensaje {
+    color: #ff4444;
+    font-style: italic;
+    font-size: 0.75rem;
+    display: block;
+    margin-top: -10px; /* Para que quede pegado al input anterior */
+    margin-bottom: 10px;
+    min-height: 1rem; /* Mantiene el espacio aunque esté vacío */
+}
+
+/* Opcional: resaltar el borde del input cuando hay error */
+.input-error {
+    border-color: #ff4444 !important;
+}

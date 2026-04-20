@@ -15,13 +15,16 @@
 
         <div class="formulario">
             <label for="txtSueldoBase">Salario Base</label>
-            <input type="number" id="txtSueldoBase" placeholder="0.00">
+            <input type="number" id="txtSueldoBase" placeholder="0.00" onblur="validarCampo('txtSueldoBase', 'errSueldo');">
+            <span id="errSueldo" class="error-mensaje"></span>
 
             <label for="txtVentas">Número de ventas</label>
-            <input type="number" id="txtVentas" placeholder="Ej. 10">
+            <input type="number" id="txtVentas" placeholder="Ej. 10" onblur="validarVentasFull();">
+            <span id="errVentas" class="error-mensaje"></span>
 
             <label for="txtPrecio">Precio del producto</label>
-            <input type="number" id="txtPrecio" placeholder="0.00">
+            <input type="number" id="txtPrecio" placeholder="0.00" onblur="validarCampo('txtPrecio', 'errPrecio');">
+            <span id="errPrecio" class="error-mensaje"></span>
 
             <button onclick="calcular();">Calcular Comisión</button>
         </div>
@@ -44,4 +47,4 @@
     </div>
     
 </body>
-</html>
+</html> 
