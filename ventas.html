@@ -2,32 +2,46 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Comisiones</title>
     <link rel="stylesheet" href="ventas.css">
+    <script src="utilitarios.js"></script>
     <script src="ventas.js"></script>
 </head>
 <body>
 
     <div class="contenedor">
-        <h1>Calculadora de Comisiones</h1>
+        <h1>Cálculo de Ventas</h1>
 
-        <label>Salario Base:</label>
-        <input type="text" id="txtSueldoBase">
+        <div class="formulario">
+            <label for="txtSueldoBase">Salario Base</label>
+            <input type="number" id="txtSueldoBase" placeholder="0.00">
 
-        <label>Número de ventas:</label>
-        <input type="text" id="txtVentas">
+            <label for="txtVentas">Número de ventas</label>
+            <input type="number" id="txtVentas" placeholder="Ej. 10">
 
-        <label>Precio del producto:</label>
-        <input type="text" id="txtPrecio">
+            <label for="txtPrecio">Precio del producto</label>
+            <input type="number" id="txtPrecio" placeholder="0.00">
 
-        <button onclick="calcular();">Calcular Comisión</button>
+            <button onclick="calcular();">Calcular Comisión</button>
+        </div>
 
-        <h2>Resultados</h2>
-        <p>Salario Base: <span id="spSueldoBase"></span></p>
-        <p>Comisión: <span id="spComision"></span></p>
-        <p>Total: <span id="spTotal"></span></p>
+        <div class="resultados">
+            <h2>Resumen</h2>
+            <div class="resultado-item">
+                <p>Salario Base:</p>
+                <span id="spSueldoBase">$0.00</span>
+            </div>
+            <div class="resultado-item">
+                <p>Comisión:</p>
+                <span id="spComision">$0.00</span>
+            </div>
+            <div class="resultado-item">
+                <p>Total a Recibir:</p>
+                <span id="spTotal">$0.00</span>
+            </div>
+        </div>
     </div>
-
     
 </body>
 </html>

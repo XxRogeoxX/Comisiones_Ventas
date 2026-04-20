@@ -11,28 +11,38 @@ function calcularComision(numeroVentas , precioProducto) {
 
 function calcular(){
 
-    let componenteSueldoBase = document.getElementById("txtSueldoBase");
-    let componenteVentas = document.getElementById("txtVentas");
-    let componentePrecio = document.getElementById("txtPrecio");
+    // let componenteSueldoBase = document.getElementById("txtSueldoBase");
+    //let componenteVentas = document.getElementById("txtVentas");
+    //let componentePrecio = document.getElementById("txtPrecio");
 
-    let sueldoBaseStr = componenteSueldoBase.value;
-    let numeroVentasStr = componenteVentas.value;
-    let PrecioProductoStr = componentePrecio.value;
+    //let sueldoBaseStr = componenteSueldoBase.value;
+    //let numeroVentasStr = componenteVentas.value;
+    //let PrecioProductoStr = componentePrecio.value;
 
-    let sueldoBase = parseFloat(sueldoBaseStr);
-    let numeroVentas = parseFloat(numeroVentasStr);
-    let PrecioProducto = parseFloat(PrecioProductoStr);
+    //let sueldoBase = parseFloat(sueldoBaseStr);
+    //let numeroVentas = parseFloat(numeroVentasStr);
+    //let PrecioProducto = parseFloat(PrecioProductoStr);
+
+    let sueldoBase = recuperarTextoFloat("txtSueldoBase");
+    let numeroVentas = recuperarTextoFloat("txtVentas");
+    let PrecioProducto = recuperarTextoFloat("txtPrecio");
+
+    
 
     let comision = calcularComision(numeroVentas, PrecioProducto);
 
     let total = sueldoBase + comision;
 
-    let spSueldoBase = document.getElementById("spSueldoBase");
-    let spComision = document.getElementById("spComision");
-    let spTotal = document.getElementById("spTotal");
+    //let spSueldoBase = document.getElementById("spSueldoBase");
+    //let spComision = document.getElementById("spComision");
+    //let spTotal = document.getElementById("spTotal");
 
-    spSueldoBase.textContent = sueldoBase;
-    spComision.textContent = comision;
-    spTotal.textContent = total;
+    //spSueldoBase.textContent = sueldoBase;
+    //spComision.textContent = comision;
+    //spTotal.textContent = total;
+
+    mostrarTexto("spSueldoBase", sueldoBase);
+    mostrarTexto("spComision", comision);
+    mostrarTexto("spTotal", total);
 
 }
